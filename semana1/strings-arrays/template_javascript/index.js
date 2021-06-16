@@ -48,7 +48,7 @@ ${meuArray[4]}`)
 const preferida = prompt('Qual sua comida preferida?')
 meuArray[1] = preferida
 
-console.log('Lista Atualizada', meuArray)*/
+console.log('Lista Atualizada', meuArray)
 
 //3-)
 const listaDeTarefas = []
@@ -60,5 +60,16 @@ listaDeTarefas.push(tarefa1,tarefa2,tarefa3)
 console.log(listaDeTarefas)
 
 const indice = prompt('Digite o índice da tarefa que você realizou: 0, 1, 2 :')
-listaDeTarefas.pop([indice])
-console.log(listaDeTarefas)
+listaDeTarefas.splice([indice],1)
+console.log(listaDeTarefas)*/
+
+//---------------------------------------------------DESAFIO---------------------------------------------------------
+//1-)
+const frase = prompt('Digite uma frase curta:')
+const semEspaco = frase.trim().split(' ')
+console.log(semEspaco)
+
+//2-)
+const frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"]
+const indice = frutas.indexOf('Abacaxi', 0)
+console.log(indice,frutas.length)
