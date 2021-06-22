@@ -63,28 +63,3 @@
 // console.log('O segundo numero é divisível pelo primeiro?', divisaoSegundo ==0)
 
 //----------------------------------------------DESAFIO--------------------------------------------------
-const bemvindo = () => {
-
-
-    const pessoa1 = {
-        nome: 'José',
-        genero: 'masculino'
-    }
-    const pessoa2 = {
-        nome: 'Paulo',
-        genero: 'feminino'
-    }
-    const pessoa3 = {
-        nome: 'João',
-        genero: 'outro'
-    }
-
-    if (pessoa1.genero === 'masculino') {
-        console.log(`Bem-vindo, ${pessoa1.nome}`)
-    }else if (pessoa2.genero === 'feminio') {
-        console.log(`Bem-vinda, ${nome}`)
-    }else if (pessoa3.genero === 'outro'){
-        console.log('Desejamos boas-vindas!')
-    }
-}
-bemvindo()
