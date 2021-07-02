@@ -1,0 +1,23 @@
+#logo{
+    width: 85px;
+    padding-top: 46px;
+    padding-left: 1178px;
+    position: absolute;
+    
+}
+#full{
+    padding-top: 1px;
+    font-size: 40px;
+    padding-left: 1178px;
+    color: whitesmoke;
+}
+#bemvindo{
+    position: absolute;
+    color: rgb(0 31 255);
+    font-size: 50px;
+    text-align: center;
+}
+
+body{
+    background-color: rgb(42, 41, 55);
+}
