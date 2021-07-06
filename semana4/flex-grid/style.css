@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    background-color: mediumvioletred;
+    padding:15px 20px  ;
+}
+.topo img{
+    width: 17px;
+}
+
+.titulo{
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: #f2d0e0;
+}
+
+.bolo{
+    width: 240px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.menubolo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+
+.tamanho{
+    width: 250px;
+    margin: 15px;
+    box-shadow: 5px 5px 5px  darkgray;
+}
+
+h2,p{
+    text-align: center;
+}
+
+footer{
+    background-color: mediumvioletred;
+    height: 50px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.tamanho2{
+    width: 20px;
+    padding: 15px;
+}
