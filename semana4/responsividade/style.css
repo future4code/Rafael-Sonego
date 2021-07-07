@@ -21,7 +21,7 @@ input{
 
 .distribuicao{
     display: grid;
-    grid-template-columns: 1fr repeat(4);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 footer{
