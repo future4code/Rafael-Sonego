@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color:#EF843A;
+    padding: 15px 20px;
+}
+
+input{
+    width: 10%;
+}
+
+.titulo{
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.distribuicao{
+    display: grid;
+    grid-template-columns: 1fr repeat(4);
+}
+
+footer{
+    background-color: #2F3437;
+    color: whitesmoke;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: #EF843A solid 2px;
+}
