@@ -47,16 +47,30 @@ main{
 
 h2,p{
     text-align: center;
+    padding: 8px;
 }
 
 footer{
     background-color: mediumvioletred;
-    height: 50px;
-    text-align: center;
-    padding-top: 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tamanho2{
+    width: 24px;
+    padding: 15px;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seta{
     width: 20px;
     padding: 15px;
+    margin-left: 61px;
 }
