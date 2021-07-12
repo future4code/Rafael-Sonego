@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: orange;
+  background-color:#202020;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,6 +26,8 @@ main {
 }
 
 .menu-vertical {
+  background-color:#212121;
+  color:whitesmoke;
   flex-basis: 200px;
   border-right-style: solid;
   border-right-width: thin;
@@ -36,6 +38,8 @@ main {
 }
 
 .painel-de-videos {
+  background-color: #181818;
+  color:whitesmoke;
   padding-left: 20px;
   padding-top: 20px;
   flex-grow: 1;
@@ -86,6 +90,8 @@ main {
 
 
 .box-pagina-principal {
+  background-color: #181818;
+  color:whitesmoke;
   display: grid;
   grid-template-rows: 3fr 1fr;
   grid-template-columns: 1fr;
@@ -98,11 +104,14 @@ main {
 
 footer {
   height: 10%;
-  background-color: grey;
+  background-color:#181818;
+  color: whitesmoke;;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 100px 0 0;
 }
 
 .box-pagina-principal > img {
@@ -118,3 +127,11 @@ input {
   background-color: #121212;
   color:whitesmoke;
 }
+h1 {
+  color: whitesmoke;
+}
+
+html{
+  background-color: #212121;
+}
+
