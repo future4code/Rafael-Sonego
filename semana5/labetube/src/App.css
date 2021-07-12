@@ -113,3 +113,8 @@ footer {
 h4 {
   margin-left: 20px;
 }
+
+input {
+  background-color: #121212;
+  color:whitesmoke;
+}
