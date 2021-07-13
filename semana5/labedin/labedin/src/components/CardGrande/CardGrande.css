@@ -8,9 +8,11 @@
 }
 
 .bigcard-container > img {
-    width: 70px;
-    margin-right: 10px;
-    border-radius: 50%;
+    width:100px;
+    margin-right: 40px;
+    margin-left: 20px;
+    border-radius: 23%;
+    
 }
 
 .bigcard-container h4 {
