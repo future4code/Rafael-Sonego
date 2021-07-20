@@ -9,7 +9,7 @@ const TarefaList = styled.ul`
 
 const Tarefa = styled.li`
   text-align: left;
-  text-decoration: ${({completa}) => (completa ? 'line-through' : 'none')};
+  text-decoration: ${({ completa }) => (completa ? 'line-through' : 'none')};
 `
 
 const InputsContainer = styled.div`
@@ -17,36 +17,67 @@ const InputsContainer = styled.div`
   grid-auto-flow: column;
   gap: 10px;
 `
-
 class App extends React.Component {
-    state = {
-      tarefas: [],
-      inputValue: '',
-      filtro: ''
-    }
+  state = {
+    tarefas: [
+      {
+        id: Date.now(),
+        texto: 'Texto da primeira tarefa',
+        completa: false,
+      },
+      {
+        id: Date.now(),
+        texto: 'Texto da segunda tarefa',
+        completa: true
+      }
+    ],
+    inputValue: '',
+    filtro: '',
+  }
 
   componentDidUpdate() {
-
+   const mostrar = localStorage.setItem("tarefas", JSON.stringify(this.state.tarefas));
+   console.log(mostrar, "churrrrrroooooooossssss")
   };
 
   componentDidMount() {
+    const pegaArray = JSON.parse(localStorage.getItem(this.state.tarefas))
 
+    console.log(pegaArray, "COVID-199999999")
   };
 
   onChangeInput = (event) => {
-
+    this.setState({ inputValue: event.target.value })
   }
 
   criaTarefa = () => {
 
+    const novaTarefa = {
+      id: Date.now(),
+      texto: this.state.inputValue,
+      completa: false
+    }
+    const copia = [...this.state.tarefas, novaTarefa]
+
+    this.setState({ tarefas: copia })
   }
 
   selectTarefa = (id) => {
+    const novoArray = this.state.tarefas.map((tarefaMapeada) => {
 
+      if (id === tarefaMapeada.id) {
+        const novaTarefa = { ...tarefaMapeada, completa: !tarefaMapeada.completa }
+        return novaTarefa
+      } else {
+        return tarefaMapeada
+      }
+    })
+
+    this.setState({ tarefas: novoArray })
   }
 
   onChangeFilter = (event) => {
-
+    this.setState({ filtro: event.target.value })
   }
 
   render() {
@@ -65,10 +96,10 @@ class App extends React.Component {
       <div className="App">
         <h1>Lista de tarefas</h1>
         <InputsContainer>
-          <input value={this.state.inputValue} onChange={this.onChangeInput}/>
+          <input value={this.state.inputValue} onChange={this.onChangeInput} />
           <button onClick={this.criaTarefa}>Adicionar</button>
         </InputsContainer>
-        <br/>
+        <br />
 
         <InputsContainer>
           <label>Filtro</label>
@@ -78,6 +109,7 @@ class App extends React.Component {
             <option value="completas">Completas</option>
           </select>
         </InputsContainer>
+
         <TarefaList>
           {listaFiltrada.map(tarefa => {
             return (
