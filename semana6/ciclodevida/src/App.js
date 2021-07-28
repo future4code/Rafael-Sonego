@@ -36,14 +36,11 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-   const mostrar = localStorage.setItem("tarefas", JSON.stringify(this.state.tarefas));
-   console.log(mostrar, "churrrrrroooooooossssss")
+    localStorage.setItem("tarefas", JSON.stringify(this.state.tarefas))
   };
 
   componentDidMount() {
-    const pegaArray = JSON.parse(localStorage.getItem(this.state.tarefas))
-
-    console.log(pegaArray, "COVID-199999999")
+    JSON.parse(localStorage.getItem(this.state.tarefas))
   };
 
   onChangeInput = (event) => {
@@ -111,9 +108,10 @@ class App extends React.Component {
         </InputsContainer>
 
         <TarefaList>
-          {listaFiltrada.map(tarefa => {
+          {listaFiltrada.map((tarefa, index) => {
             return (
               <Tarefa
+                key={index}
                 completa={tarefa.completa}
                 onClick={() => this.selectTarefa(tarefa.id)}
               >
